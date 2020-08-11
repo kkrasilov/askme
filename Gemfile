@@ -9,8 +9,6 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'webpacker', '~> 4.0'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

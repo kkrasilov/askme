@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	  def show
+  def show
     @hello = "Привет!"
   end
 end

@@ -53,5 +53,3 @@ class User < ApplicationRecord
     self.username = username.downcase if username.present?
   end
 end
-# VALID_EMAIL_REGEX = /^[a-z\d_+.\-]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+$/i
-# VALID_USERNAME_REGEX = /^[a-zA-Z0-9_]*/

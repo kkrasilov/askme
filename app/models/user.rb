@@ -17,7 +17,7 @@ class User < ApplicationRecord
   validates :password, presence: true, on: :create
   validates_confirmation_of :password
 
-  # before_validation :normalize_username
+  before_validation :normalize_username
   before_save :encrypt_password
 
   private

@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   has_many :questions
 
-  before_validation :normalize_username
+  before_validation :normalize_params
   before_save :encrypt_password
 
   validates :username, presence: true, length: {maximum: 40}, format: {with: VALID_USERNAME_REGEX}
@@ -20,7 +20,7 @@ class User < ApplicationRecord
   validates :password, confirmation: true
 
   def self.authenticate(email, password)
-    user = find_by(email: email)
+    user = find_by(email: email&.downcase!)
 
     return unless user.present?
 
@@ -46,7 +46,8 @@ class User < ApplicationRecord
     end
   end
 
-  def normalize_username
+  def normalize_params
     username&.downcase!
+    email&.downcase!
   end
 end

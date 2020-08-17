@@ -17,19 +17,25 @@
 </div>
 
 <div class="user-question-form-div column-1-4 column-1-4-right" id='ask-form'>
-  <div class="user-question-form buffer-both">
+  <div class="user-question-form">
     <div class="form">
       <%= form_for @new_question do |f| %>
-        <%= f.hidden_field :user_id %>
-        <div class="form-field">
-          <%= f.label "Ваш вопрос для @#{@user.username}", class: 'form-label' %>
-          <%= f.text_area :text, class: 'form-textarea' %>
-        </div>
-        <div class="form-action">
-          <%= submit_tag 'Задать вопрос', class: 'button button-small button-dark' %>
-        </div>
+      <%= f.hidden_field :user_id %>
+      <div class="form-field">
+        <%= f.label "Ваш вопрос для @#{@user.username}", class: 'form-label' %>
+        <%= f.text_area :text, class: 'form-textarea' %>
+      </div>
+      <div class="form-action">
+        <%= submit_tag 'Задать вопрос', class: 'button button-small button-dark' %>
+      </div>
       <% end %>
     </div>
+  </div>
+</div>
+
+<div class="column-3-4">
+  <div class="user-questions-count">
+    Всего <%= @questions.count %><%= question_declension(@questions.count) %>
   </div>
 </div>
 
@@ -37,7 +43,7 @@
   <div class="user-questions buffer-both">
     <div class="questions-list">
       <% @questions.each do |question| %>
-        <%= render partial: 'questions/question', object: question %>
+      <%= render partial: 'questions/question', object: question %>
       <% end %>
     </div>
   </div>

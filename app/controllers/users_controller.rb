@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     ]
 
     @questions_count = @questions.count
-    @answers_count = @questions.map(&:answer).count
+    @answers_count = @questions.filter_map(&:answer).count
     @unanswered_count = @questions_count - @answers_count
 
     @new_question = Question.new

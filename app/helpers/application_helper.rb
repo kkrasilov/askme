@@ -7,19 +7,15 @@ module ApplicationHelper
     end
   end
 
-  def question_declension(question_count)
-    declension(question_count, 'вопрос', 'вопроса', 'вопросов')
+  def question_declension
+    I18n.translate :question, :count => @questions_count
   end
 
-  def declension(number, text1, text2, text3)
-    second_last_digit = (number / 10) % 10
-    exclusions = (second_last_digit == 1)
+  def answer_declension
+    I18n.translate :answer, :count => @answers_count
+  end
 
-    last_number = number % 10
-
-    return text3 if last_number.zero? || last_number.between?(5, 9) || exclusions
-    return text2 if last_number.between?(2, 4)
-
-    text1
+  def unanswered_declension
+    I18n.translate :unanswered, :count => @unanswered_count
   end
 end

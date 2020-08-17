@@ -48,15 +48,8 @@
 }
 
 .user-question-form {
-  margin-top: 10px;
   padding: 10px;
   margin-left: 10px;
-  background: #D9E6E5;
-}
-
-.user-questions-count {
-  margin-top: 10px;
-  padding: 10px;
   background: #D9E6E5;
 }
 
@@ -74,6 +67,7 @@
   .user-ask-button {
     display: none;
   }
+
   #ask-form {
     display: block !important;
   }

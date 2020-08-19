@@ -7,8 +7,6 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'webpacker', '~> 4.0'
 gem 'jquery-rails'
 gem 'rails-i18n', '~> 6.0.0'
-gem 'uglifier'
-gem 'rails_12factor'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'

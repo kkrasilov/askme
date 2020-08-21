@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, except: [:index, :create, :new]
-  before_action :authorize_user, except: [:index, :new, :create, :show]
+  before_action :authorize_user, except: [:index, :new, :create, :show, :destroy]
 
   def index
     @users = User.all
@@ -42,6 +42,11 @@ class UsersController < ApplicationController
     @questions_count = @questions.count
     @answers_count = @questions.where.not(answer: nil).count
     @unanswered_count = @questions_count - @answers_count
+  end
+
+  def destroy
+    @user.destroy
+    redirect_to root_path, notice: 'Пользователь удален!'
   end
 
   private

@@ -8,15 +8,15 @@ class SessionsController < ApplicationController
     if user.present?
       session[:user_id] = user.id
 
-      redirect_to root_url, notice: 'Вы успешно залогинились!'
+      redirect_to root_url, notice: I18n.t('controllers.sessions.success')
     else
-      flash.now.alert = 'Неправильный email или пароль'
+      flash.now.alert = I18n.t('controllers.sessions.incorrect')
       render :new
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: 'Вы разлогинились! Приходите еще!'
+    redirect_to root_url, notice: I18n.t('controllers.sessions.log_off')
   end
 end

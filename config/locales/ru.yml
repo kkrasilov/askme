@@ -1,16 +1,69 @@
 ru:
+  controllers:
+    application:
+      no_access: 'Вам сюда нельзя!'
+    questions:
+      asked: 'Вопрос задан!'
+      saved: 'Вопрос сохранен!'
+      destroyed: 'Вопрос удален!'
+    sessions:
+      success: 'Вы успешно залогинились!'
+      incorrect: 'Неправильный email или пароль'
+      log_off: 'Вы разлогинились! Приходите еще!'
+    users:
+      already_log_in: 'Вы уже залогинены'
+      saved: 'Пользователь сохранен!'
+      updated: 'Данные обновлены!'
+      destroyed: 'Пользователь удален!'
+
+  app:
+    name: 'Хорошие вопросы!'
+    questions:
+      are_you_sure: 'Вы уверены?'
+    headers:
+      change_profile: 'Править профиль'
+      our_users: 'Наши пользователи'
+      join_us: 'Присоединяйся к нам'
+
+  links:
+    register: 'Зарегистрироваться'
+    sign_in: 'Войти'
+    log_off: 'Выйти'
+    saved: 'Сохранить'
+    to_return: 'Вернуться'
+
+  views:
+    questions:
+      question: 'Вопрос'
+      answer: 'Ответ'
+    sessions:
+      login: 'Логин (email)'
+      password: 'Пароль'
+    users:
+      your_name: 'Ваше имя'
+      login: 'Логин (email)'
+      your_avatar_url: 'URL вашей аватарки'
+      bg_color: 'Цвет фона'
+      nickname: 'Никнейм'
+      name: 'Имя'
+      password: 'Пароль'
+      password_confirmation: 'Пароль еще раз!'
+      dont_change_your_password: 'Если не хотите менять пароль — оставьте эти поля пустыми!'
+
   question:
     zero: 'нет вопросов'
     one: 'вопрос'
     few: 'вопроса'
     many: 'вопросов'
     other: 'вопросов'
+
   answer:
     zero: 'нет ответов'
     one: 'ответ'
     few: 'ответа'
     many: 'ответов'
     other: 'ответов'
+
   unanswered:
     zero: 'безответных'
     one: 'безответный'

@@ -24,6 +24,7 @@ ru:
       change_profile: 'Править профиль'
       our_users: 'Наши пользователи'
       join_us: 'Присоединяйся к нам'
+      list_of_questions_for_a_hashtag: 'Список вопросов для тэга'
 
   links:
     register: 'Зарегистрироваться'

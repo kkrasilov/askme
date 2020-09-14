@@ -9,6 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 require('jquery')
 
+import './jquery.tagcloud'
+
 document.addEventListener("turbolinks:load", function () {
   $(function () {
     $('#ask-button').click(function () {
@@ -16,4 +18,10 @@ document.addEventListener("turbolinks:load", function () {
       return false;
     });
   });
-})
+
+  // Облако тэгов
+  $('#tags a').tagcloud({
+    size: { start: 12, end: 30, unit: 'pt' },
+    color: { start: '#aaa', end: '#37474F' }
+  });
+});

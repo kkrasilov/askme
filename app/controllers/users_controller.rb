@@ -4,11 +4,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @hashtags = Hashtag.with_questions
   end
 
   def new
     redirect_to root_url, alert: I18n.t('controllers.users.already_log_in')  if current_user.present?
-    @user = User.new
+    @user = User.all
   end
 
   def create

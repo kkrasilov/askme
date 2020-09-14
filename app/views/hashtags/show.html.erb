@@ -1,6 +1,6 @@
 <div class="column-3-4">
   <div class="user-questions buffer-both">
-    <h2><%= t('app.headers.list_of_questions_for_a_hashtag') + @hashtag.name %></h2>
+    <h2><%= "#{t('app.headers.list_of_questions_for_a_hashtag')} #{@hashtag.name}" %></h2>
     <div class="questions-list">
       <% @questions.each do |question| %>
         <%= render partial: 'questions/question', object: question %>

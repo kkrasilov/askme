@@ -22,6 +22,10 @@
     <div class="question-date">
       <%= l(question.created_at, format: :short) %>
     </div>
+
+    <div class="question-hashtags">
+      <%= question.hashtags.map { |h| link_to "##{h.name}", hashtag_path(h) }.join(', ').html_safe %>
+    </div>
   </div>
 
   <% if question.user == current_user %>

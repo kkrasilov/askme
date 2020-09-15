@@ -25,6 +25,9 @@ ru:
       our_users: 'Наши пользователи'
       join_us: 'Присоединяйся к нам'
       list_of_questions_for_a_hashtag: 'Список вопросов для тэга #%{name}'
+      delete_profile: 'Удалить мой профиль?'
+      questions:
+        are_you_sure: 'Вы уверены?'
 
   links:
     register: 'Зарегистрироваться'
@@ -32,6 +35,7 @@ ru:
     log_off: 'Выйти'
     saved: 'Сохранить'
     to_return: 'Вернуться'
+    delete_profile: 'Удалить профиль?'
 
   views:
     questions:

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def new
     redirect_to root_url, alert: I18n.t('controllers.users.already_log_in')  if current_user.present?
-    @user = User.all
+    @user = User.new
   end
 
   def create
